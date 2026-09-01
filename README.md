@@ -4,7 +4,7 @@
 
 # PM Skills Marketplace: The AI Operating System for Better Product Decisions
 
-> 65 PM skills and 36 chained workflows across 8 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, and growth. 
+> 66 PM skills and 37 chained workflows across 8 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, and growth. 
 
 ![Plugin overview](.docs/images/plugins-overview.webp)
 
@@ -187,13 +187,14 @@ Commands:
 </details>
 
 <details>
-<summary><strong>3. pm-execution</strong> — PRDs, OKRs, roadmaps, sprints, retros, release notes, stakeholder management (15 skills, 10 commands)</summary>
+<summary><strong>3. pm-execution</strong> — PRDs, OKRs, roadmaps, sprints, retros, release notes, build handoffs, stakeholder management (16 skills, 11 commands)</summary>
 
-Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, release notes, pre-mortems, stakeholder management, user stories, and prioritization frameworks.
+Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, release notes, pre-mortems, build handoffs, stakeholder management, user stories, and prioritization frameworks.
 
-**Skills (15):**
+**Skills (16):**
 
 - `create-prd` — Comprehensive 8-section PRD template
+- `build-handoff` — Turn a PRD, OST, or stories into an engineering-ready build handoff: de-risked, vertically sliced, with testable acceptance criteria and tracker-ready issues
 - `brainstorm-okrs` — Team-level OKRs aligned with company objectives
 - `outcome-roadmap` — Transform a feature list into an outcome-focused roadmap
 - `sprint-plan` — Sprint planning with capacity estimation, story selection, and risk identification
@@ -209,9 +210,10 @@ Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, re
 - `dummy-dataset` — Realistic dummy datasets as CSV, JSON, SQL, or Python
 - `prioritization-frameworks` — Reference guide to 9 prioritization frameworks (Opportunity Score, ICE, RICE, MoSCoW, Kano, etc.)
 
-**Commands (10):**
+**Commands (11):**
 
 - `/write-prd` — Create a PRD from a feature idea or problem statement
+- `/handoff` — Turn a PRD, OST, or story set into an engineering-ready build handoff (build plan + tracker-ready issues)
 - `/plan-okrs` — Brainstorm team-level OKRs
 - `/transform-roadmap` — Convert a feature-based roadmap into outcome-focused
 - `/sprint` — Sprint lifecycle (`plan|retro|release`)
