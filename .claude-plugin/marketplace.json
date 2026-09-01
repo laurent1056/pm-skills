@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-skills",
-  "version": "1.1.0",
-  "description": "Structured AI workflows for better product decisions. 66 domain-specific skills and 37 chained workflows across 8 PM plugins — from discovery to strategy, execution, launch, and growth.",
+  "version": "2.1.0",
+  "description": "Structured AI workflows for better product decisions. 69 domain-specific skills and 43 chained workflows across 9 PM plugins — from discovery to strategy, execution, launch, growth, and shipping AI-built software.",
   "owner": {
     "name": "Paweł Huryn",
     "email": "pawel@productcompass.pm",
@@ -55,6 +55,12 @@
       "name": "pm-toolkit",
       "description": "PM utility skills: resume review, NDA drafting, privacy policy generation, and grammar/flow checking. Essential tools for product managers beyond core product work.",
       "source": "./pm-toolkit",
+      "category": "product-management"
+    },
+    {
+      "name": "pm-ai-shipping",
+      "description": "AI Shipping Kit — for PMs and founders accountable for AI-built code. Document a vibe-coded app, audit it for intended-vs-implemented security gaps and performance issues, and produce a reviewer-ready shipping packet.",
+      "source": "./pm-ai-shipping",
       "category": "product-management"
     }
   ]

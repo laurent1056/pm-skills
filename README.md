@@ -1,12 +1,16 @@
 ![GitHub stars](https://img.shields.io/github/stars/phuryn/pm-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://github.com/phuryn/pm-skills/blob/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://github.com/phuryn/pm-skills/blob/main/CONTRIBUTING.md)
+[![Tests](https://github.com/phuryn/pm-skills/actions/workflows/tests.yml/badge.svg)](https://github.com/phuryn/pm-skills/actions/workflows/tests.yml)
+[![Companion: pm-skills](https://img.shields.io/badge/companion-pm--brain-blue)](https://github.com/phuryn/pm-brain)
+[![Companion: burnstop](https://img.shields.io/badge/companion-burnstop-blue)](https://github.com/phuryn/burnstop)
+[![Companion: claude-usage](https://img.shields.io/badge/companion-claude--usage-blue)](https://github.com/phuryn/claude-usage)
 
 # PM Skills Marketplace: The AI Operating System for Better Product Decisions
 
-> 66 PM skills and 37 chained workflows across 8 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, and growth. 
+> 69 PM skills and 43 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code. 
 
-![Plugin overview](.docs/images/plugins-overview.webp)
+![PM Skills marketplace: skills, commands, and all 9 plugins at a glance](.docs/images/plugins.png)
 
 Designed for Claude Code and Cowork. Skills compatible with other AI assistants.
 
@@ -30,15 +34,15 @@ The result: better product decisions, not just faster documents.
 
 ## How It Works (Skills, Commands, Plugins)
 
+![Example prompts: a skill and two commands (/write-prd, /ship-check) in action](.docs/images/examples.png)
+
 **Skills** are the building blocks of the marketplace. Each skill gives Claude domain knowledge, analytical frameworks, or a guided workflow for a specific PM task. Some skills also work as reusable foundations that multiple commands share. 
 
 Skills are loaded automatically when relevant to the conversation — no explicit invocation needed. If needed (e.g., prioritizing skills over general knowledge), you can **force loading skills** with `/plugin-name:skill-name` or `/skill-name` (Claude will add the prefix).
 
 **Commands** are user-triggered workflows invoked with `/command-name`. They chain one or more skills into an end-to-end process. For example, `/discover` chains four skills together: brainstorm-ideas → identify-assumptions → prioritize-assumptions → brainstorm-experiments.
 
-**Plugins** group related skills and commands into installable packages. Each plugin covers a PM domain — discovery, strategy, execution, and so on. Installing the marketplace gives you all 8 plugins at once.
-
-![How skills work](.docs/images/how-skills-work.webp)
+**Plugins** group related skills and commands into installable packages. Each plugin covers a PM domain — discovery, strategy, execution, and so on. Installing the marketplace gives you all 9 plugins at once.
 
 Commands use skills. Some skills serve multiple commands. Some skills (like `prioritization-frameworks` or `opportunity-solution-tree`) are standalone references that Claude draws on whenever relevant — no command needed.
 
@@ -53,7 +57,7 @@ Commands are designed to flow into each other, matching the PM workflow. After a
 3. Select **Add marketplace from GitHub**
 4. Enter: `phuryn/pm-skills`
 
-All 8 plugins install automatically. You get both commands (`/discover`, `/strategy`, etc.) and skills.
+All 9 plugins install automatically. You get both commands (`/discover`, `/strategy`, etc.) and skills.
 
 ![Installing PM Skills in Claude Cowork](.docs/images/pm-skills-install.gif)
 
@@ -72,7 +76,40 @@ claude plugin install pm-data-analytics@pm-skills
 claude plugin install pm-marketing-growth@pm-skills
 claude plugin install pm-go-to-market@pm-skills
 claude plugin install pm-execution@pm-skills
+claude plugin install pm-ai-shipping@pm-skills
 ```
+
+### Codex CLI (OpenAI)
+
+Codex reads the same plugin marketplace file as Claude Code, so you can install PM Skills natively — no conversion or file-copying needed:
+
+```bash
+# Step 1: Add the marketplace
+codex plugin marketplace add phuryn/pm-skills
+
+# Step 2: Install the plugins you want
+codex plugin add pm-toolkit@pm-skills
+codex plugin add pm-product-strategy@pm-skills
+codex plugin add pm-product-discovery@pm-skills
+codex plugin add pm-market-research@pm-skills
+codex plugin add pm-data-analytics@pm-skills
+codex plugin add pm-marketing-growth@pm-skills
+codex plugin add pm-go-to-market@pm-skills
+codex plugin add pm-execution@pm-skills
+codex plugin add pm-ai-shipping@pm-skills
+```
+
+**What you get:** every skill (the PM frameworks), available to Codex and invocable by name. Install whole plugins rather than cherry-picking individual skills — a workflow usually relies on several skills that ship together.
+
+**What's different from Claude Code:** the `/slash` commands (`/discover`, `/write-prd`, …) install but don't run as Codex slash commands — Codex plugins don't expose commands. To run a workflow, just describe the steps in plain language, for example:
+
+> Run product discovery on *[your idea]*: brainstorm options, map assumptions, prioritize the risky ones, then design experiments — pause between each step.
+
+**Optional — let Codex turn the workflows into skills.** Because the command files ship inside each installed plugin, you can ask Codex to convert the ones you use most:
+
+> Read the command files in the pm-execution plugin and create equivalent Codex skills for the workflows I use most often.
+
+This is a best-effort, model-driven conversion (some Claude-specific command syntax won't translate), but it's a quick way to get the guided workflows on Codex without leaving the CLI.
 
 ### Other AI assistants (skills only)
 
@@ -83,7 +120,6 @@ The `skills/*/SKILL.md` files follow the universal skill format and work with an
 | **Gemini CLI** | Copy skill folders to `.gemini/skills/` | Skills only |
 | **OpenCode** | Copy skill folders to `.opencode/skills/` | Skills only |
 | **Cursor** | Copy skill folders to `.cursor/skills/` | Skills only |
-| **Codex CLI** | Copy skill folders to `.codex/skills/` | Skills only |
 | **Kiro** | Copy skill folders to `.kiro/skills/` | Skills only |
 
 ```bash
@@ -187,11 +223,11 @@ Commands:
 </details>
 
 <details>
-<summary><strong>3. pm-execution</strong> — PRDs, OKRs, roadmaps, sprints, retros, release notes, build handoffs, stakeholder management (16 skills, 11 commands)</summary>
+<summary><strong>3. pm-execution</strong> — PRDs, OKRs, roadmaps, sprints, retros, release notes, build handoffs, red-teaming, stakeholder management (17 skills, 12 commands)</summary>
 
 Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, release notes, pre-mortems, build handoffs, stakeholder management, user stories, and prioritization frameworks.
 
-**Skills (16):**
+**Skills (17):**
 
 - `create-prd` — Comprehensive 8-section PRD template
 - `build-handoff` — Turn a PRD, OST, or stories into an engineering-ready build handoff: de-risked, vertically sliced, with testable acceptance criteria and tracker-ready issues
@@ -209,8 +245,9 @@ Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, re
 - `test-scenarios` — Test scenarios: happy paths, edge cases, error handling
 - `dummy-dataset` — Realistic dummy datasets as CSV, JSON, SQL, or Python
 - `prioritization-frameworks` — Reference guide to 9 prioritization frameworks (Opportunity Score, ICE, RICE, MoSCoW, Kano, etc.)
+- `strategy-red-team` — Adversarial stress-test of a plan: surface load-bearing assumptions, name what would make each one fail, and rank by cheapest test
 
-**Commands (11):**
+**Commands (12):**
 
 - `/write-prd` — Create a PRD from a feature idea or problem statement
 - `/handoff` — Turn a PRD, OST, or story set into an engineering-ready build handoff (build plan + tracker-ready issues)
@@ -218,6 +255,7 @@ Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, re
 - `/transform-roadmap` — Convert a feature-based roadmap into outcome-focused
 - `/sprint` — Sprint lifecycle (`plan|retro|release`)
 - `/pre-mortem` — Pre-mortem risk analysis on a PRD or launch plan
+- `/red-team-prd` — Adversarially stress-test a PRD, roadmap, or strategy and rank the riskiest assumptions by cheapest test
 - `/meeting-notes` — Summarize a meeting transcript into structured notes
 - `/stakeholder-map` — Map stakeholders and create a communication plan
 - `/write-stories` — Break features into backlog items (`user|job|wwa`)
@@ -401,6 +439,38 @@ Commands:
 
 </details>
 
+<details>
+<summary><strong>9. pm-ai-shipping</strong> — AI Shipping Kit: document a vibe-coded app, audit security and performance, map test coverage, compile a shipping packet (2 skills, 5 commands)</summary>
+
+For PMs and founders accountable for AI-built code. AI agents write code fast but leave no record of *intent* — what the system should do, who may do what, where the secrets live, which rules are actually verified. This kit restores reviewability: it documents the system, then audits the gap between what the docs say and what the code actually does — the class of bug generic scanners miss.
+
+**Skills (2):**
+
+- `shipping-artifacts` — The durable documentation set that makes an AI-built app reviewable: a core every app needs (architecture, user/permission flows, permissions, variables/secrets, test-coverage map) plus conditional docs added only when they apply (emails, cron, SEO, embedded agents/automation). Defines what each doc must capture and how a reviewer uses it
+- `intended-vs-implemented` — The method for finding the gap between what a system is documented to do and what the code actually does, with cited evidence on both sides
+
+**Commands (5):**
+
+- `/ship-check` — Turn a vibe-coded repo into a reviewer-ready shipping packet: document, wire agent context, run security and performance audits, map test coverage, and compile the results
+- `/document-app` — Reverse-engineer a codebase into the system documents reviewers and auditors need — a core set (architecture, flows, permissions, variables) plus conditional docs (emails, cron, SEO, automation) when they apply
+- `/derive-tests` — Turn documented intent into a test-coverage map: inventory the tests that exist today, separate them from proposed tests and unverified gaps, and recommend a green-before-merge CI gate
+- `/security-audit-static` — Static security audit: map trust boundaries, cross-reference documented intent, self-refute every finding, and report only evidence-backed risks
+- `/performance-audit-static` — Static performance audit: find N+1 queries and request waterfalls, over-fetching, missing indexes, and caching opportunities, ranked by effort and impact
+
+**Examples:**
+
+Skills:
+- `What documentation does my Supabase app need before someone can review it?`
+- `Where does what this code does diverge from what the docs say it should do?`
+
+Commands:
+- `/ship-check the payments service`
+- `/document-app — Reverse-engineer the system docs for this repo`
+- `/derive-tests — Which documented rules have no test yet?`
+- `/security-audit-static src/api`
+
+</details>
+
 ---
 
 ## About
@@ -423,6 +493,12 @@ Selected skills based on the work of:
 - Maja Voje — [*Go-To-Market Strategist*](https://gtmstrategist.com/)
 
 Curated by Paweł Huryn from [The Product Compass Newsletter](https://www.productcompass.pm).
+
+## Compose with PM Brain
+
+![PM Brain composes with PM Skills](.docs/images/pm-brain-pm-skills.webp)
+
+[PM Brain](https://github.com/phuryn/pm-brain) a second brain for product managers. Plain markdown files in a folder on your laptop. Claude reads them before answering, writes to them after, sweeps them every Friday. No vector DB. No cloud. No agent memory tricks.
 
 ## Contributing
 

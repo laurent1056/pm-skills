@@ -2,7 +2,7 @@
 
 Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mortems, stakeholder maps, user stories, prioritization frameworks, and more.
 
-## Skills (16)
+## Skills (17)
 
 - **brainstorm-okrs** — Brainstorm team-level OKRs aligned with company objectives.
 - **build-handoff** — Turn a PRD, Opportunity Solution Tree, or story set into an engineering-ready build handoff: scoped brief, de-risked unknowns, vertically-sliced epics and stories with testable acceptance criteria, a sequencing plan, and tracker-ready issues.
@@ -16,18 +16,20 @@ Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mort
 - **retro** — Facilitate a structured sprint retrospective.
 - **sprint-plan** — Plan a sprint with capacity estimation, story selection, dependency mapping, and risk identification.
 - **stakeholder-map** — Build a stakeholder map using a power/interest grid, identify communication strategies per quadrant, and generate a communication plan.
+- **strategy-red-team** — Red-team a PRD, roadmap, or strategy by attacking its load-bearing assumptions; rank failure modes and return the cheapest test and kill criteria for each.
 - **summarize-meeting** — Summarize a meeting transcript into a structured template with date, participants, topic, summary points, and action items.
 - **test-scenarios** — Create comprehensive test scenarios from user stories with test objectives, starting conditions, user roles, step-by-step actions, and expected outcomes.
 - **user-stories** — Create user stories following the 3 C's (Card, Conversation, Confirmation) and INVEST criteria with descriptions, design links, and acceptance criteria.
 - **wwas** — Create product backlog items in Why-What-Acceptance format.
 
-## Commands (11)
+## Commands (12)
 
 - `/pm-execution:generate-data` — Generate realistic dummy datasets for testing — CSV, JSON, SQL inserts, or Python scripts.
 - `/pm-execution:handoff` — Turn a PRD, Opportunity Solution Tree, or story set into an engineering-ready build handoff — de-risked, vertically sliced, with testable acceptance criteria and tracker-ready issues.
 - `/pm-execution:meeting-notes` — Summarize a meeting transcript into structured notes with decisions, action items, and follow-ups.
 - `/pm-execution:plan-okrs` — Brainstorm team-level OKRs aligned with company objectives — qualitative objectives with measurable key results.
 - `/pm-execution:pre-mortem` — Run a pre-mortem risk analysis on a PRD, launch plan, or feature — identify what could go wrong before it does.
+- `/pm-execution:red-team-prd` — Red-team a PRD, roadmap, or strategy — attack its load-bearing assumptions and return the cheapest test for each before you commit.
 - `/pm-execution:sprint` — Sprint lifecycle — plan a sprint, run a retrospective, or generate release notes.
 - `/pm-execution:stakeholder-map` — Map stakeholders on a Power × Interest grid and create a tailored communication plan.
 - `/pm-execution:test-scenarios` — Generate comprehensive test scenarios from user stories or feature specs — happy paths, edge cases, and error handling.
