@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### pm-execution
+
+- New **`build-handoff`** skill and **`/handoff`** command — turn a PRD, Opportunity Solution Tree, or story set into an engineering-ready build handoff: a scoped brief, de-risked technical unknowns, vertically-sliced epics and stories with testable acceptance criteria, a sequencing plan, and tracker-ready issues a coding agent or dev team can execute. (#1)
+
 ## v2.1.0 — 2026-07-03
 
 ### pm-ai-shipping

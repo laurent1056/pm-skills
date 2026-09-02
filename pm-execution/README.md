@@ -2,9 +2,10 @@
 
 Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mortems, stakeholder maps, user stories, prioritization frameworks, and more.
 
-## Skills (16)
+## Skills (17)
 
 - **brainstorm-okrs** — Brainstorm team-level OKRs aligned with company objectives.
+- **build-handoff** — Turn a PRD, Opportunity Solution Tree, or story set into an engineering-ready build handoff: scoped brief, de-risked unknowns, vertically-sliced epics and stories with testable acceptance criteria, a sequencing plan, and tracker-ready issues.
 - **create-prd** — Create a Product Requirements Document using a comprehensive 8-section template covering summary, background, objectives, market segments, value propositions, solution details, and release planning.
 - **dummy-dataset** — Generate realistic dummy datasets for testing with customizable columns, constraints, and output formats (CSV, JSON, SQL, Python script).
 - **job-stories** — Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria.
@@ -21,9 +22,10 @@ Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mort
 - **user-stories** — Create user stories following the 3 C's (Card, Conversation, Confirmation) and INVEST criteria with descriptions, design links, and acceptance criteria.
 - **wwas** — Create product backlog items in Why-What-Acceptance format.
 
-## Commands (11)
+## Commands (12)
 
 - `/pm-execution:generate-data` — Generate realistic dummy datasets for testing — CSV, JSON, SQL inserts, or Python scripts.
+- `/pm-execution:handoff` — Turn a PRD, Opportunity Solution Tree, or story set into an engineering-ready build handoff — de-risked, vertically sliced, with testable acceptance criteria and tracker-ready issues.
 - `/pm-execution:meeting-notes` — Summarize a meeting transcript into structured notes with decisions, action items, and follow-ups.
 - `/pm-execution:plan-okrs` — Brainstorm team-level OKRs aligned with company objectives — qualitative objectives with measurable key results.
 - `/pm-execution:pre-mortem` — Run a pre-mortem risk analysis on a PRD, launch plan, or feature — identify what could go wrong before it does.
